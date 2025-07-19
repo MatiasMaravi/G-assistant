@@ -1,13 +1,25 @@
-# Archivo de credenciales - no debe ser versionado
+# Dependencias
+node_modules/
+
 credenciales.json
 
-# Archivos de configuración sensibles
-*.env
+# Token de acceso - generado automáticamente
+token.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del entorno
 .env
 .env.local
 .env.production
-
-# Logs
 *.log
 logs/
 
