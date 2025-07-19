@@ -1,0 +1,21 @@
+# Dependencias mínimas para el Clasificador BCP
+# Compatible con Python 3.13
+
+# Vertex AI (para clasificación con Gemini)
+google-cloud-aiplatform==1.38.1
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+
+# API REST (opcional - solo si usas la API)
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic==2.5.0
+
+# Gmail API (opcional - solo si usas Gmail)
+google-api-python-client==2.108.0
+
+# JSON y utilidades (incluidas en Python estándar)
+# json - built-in
+# re - built-in  
+# datetime - built-in
