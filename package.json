@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "node src/index.js",
-    "auth": "node src/auth.js"
+    "auth": "node src/auth.js",
+    "auth-cloudnl": "node authCloudNL.js",
+    "bcp": "node bcpFilter.js",
+    "check-nl": "node checkCloudNL.js",
+    "quick-nl": "node quickCheckNL.js"
   },
   "dependencies": {
     "googleapis": "^126.0.1",

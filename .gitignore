@@ -2,9 +2,10 @@
 node_modules/
 
 credenciales.json
-
+credenciales2.json
 # Token de acceso - generado automáticamente
 token.json
+token-cloudnl.json
 
 # Logs
 *.log
