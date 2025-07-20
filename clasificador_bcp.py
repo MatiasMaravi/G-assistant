@@ -21,7 +21,7 @@ class ClasificadorBCP:
         self.model = GenerativeModel("gemini-2.0-flash-001")
         self.datos_bcp = None
         
-    def cargar_datos_bcp(self, archivo_json="bcp-consumos-ultimos-7-dias.json"):
+    def cargar_datos_bcp(self, archivo_json="exports/bcp-consumos-2025-07-20T00-32-35.json"):
         """Carga los datos financieros desde el JSON del BCP"""
         try:
             with open(archivo_json, 'r', encoding='utf-8') as file:
