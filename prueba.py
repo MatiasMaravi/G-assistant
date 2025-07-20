@@ -446,11 +446,17 @@ df = pd.DataFrame(datos)
 df["Fecha"] = pd.to_datetime(df["Fecha"], format="%a, %d %b %Y %H:%M:%S", utc=True)
 df["Fecha"] = df["Fecha"].dt.tz_localize(None)  # Eliminar zona horaria
 
+periodo_raw = json_data['metadata']['periodo_datos']
+periodo_dt = datetime.fromisoformat(periodo_raw.replace("Z", ""))  # quitar la Z que indica UTC
+
+# Formatear como quieras mostrarlo, por ejemplo:
+periodo_legible = periodo_dt.strftime("%d/%m/%Y %H:%M")
+
 # === Dashboard Streamlit ===
 st.set_page_config(page_title="Dashboard Financiero", layout="centered")
 st.title("📊 Dashboard Financiero")
 
-st.markdown(f"🗓️ **Periodo de datos:** {json_data['metadata']['periodo_datos']}")
+st.markdown(f"🗓️ **Periodo de datos:** {periodo_legible}")
 st.markdown(f"💳 **Total de consumos:** {json_data['metadata']['total_consumos']}")
 st.markdown(f"💰 **Total gastado:** S/ {json_data['metadata']['total_gastado']:.2f}")
 st.markdown("---")
