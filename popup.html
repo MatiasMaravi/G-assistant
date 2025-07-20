@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Estado Financiero</title>
+</head>
+<body>
+  <button id="abrirDashboard">Generar información de la última semana</button>
+
+  <script>
+    document.getElementById("abrirDashboard").addEventListener("click", function () {
+      chrome.tabs.create({ url: "https://www.google.com" });
+    });
+  </script>
+</body>
+</html>

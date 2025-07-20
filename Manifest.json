@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Asistente Gmail",
+  "version": "1.0",
+  "description": "Botón flotante que abre un dashboard externo",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://mail.google.com/*", "http://127.0.0.1/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["inject.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
