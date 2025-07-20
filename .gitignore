@@ -7,6 +7,8 @@ credenciales2.json
 token.json
 token-cloudnl.json
 
+venv/
+
 # Logs
 *.log
 npm-debug.log*
