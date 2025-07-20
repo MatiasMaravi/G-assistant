@@ -58,7 +58,7 @@ class ClasificadorBCP:
             'fecha': fecha,
             'tipo_tarjeta': tipo_tarjeta,
             'email_id': email.get('id', ''),
-            'leido': email.get('isRead', False)
+            'leido': str(email.get('isRead', False)).upper()
         }
     
     def generar_contexto_clasificacion(self):
@@ -230,7 +230,7 @@ class ClasificadorBCP:
                 'tipo_tarjeta': datos_consumo['tipo_tarjeta'],
                 'justificacion': justificacion,
                 'email_id': datos_consumo['email_id'],
-                'leido': datos_consumo['leido']
+                'leido': str(datos_consumo['leido']).upper() if isinstance(datos_consumo['leido'], bool) else datos_consumo['leido']
             }
             
             # Guardar resultado completo y por categoría
@@ -370,7 +370,7 @@ class ClasificadorBCP:
                 'tipo_tarjeta': datos_consumo['tipo_tarjeta'],
                 'justificacion': justificacion,
                 'email_id': datos_consumo['email_id'],
-                'leido': datos_consumo['leido']
+                'leido': str(datos_consumo['leido']).upper() if isinstance(datos_consumo['leido'], bool) else datos_consumo['leido']
             }
             
             # Agregar a la lista general y a la categoría específica
